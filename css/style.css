@@ -39,19 +39,19 @@ body {
     position: relative;
 }
 
-.logo--box {
+.header__logo--box {
     position: absolute;
     left: 3rem;
     top: 3rem;
 
 }
 
-.logo {
+.header__logo {
     height: 3rem;
     color: #fff;
 }
 
-.text--box {
+.header__text--box {
     position: absolute;
     top: 40%;
     left: 50%;
