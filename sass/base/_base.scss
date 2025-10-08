@@ -1,0 +1,32 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+$color--light-green: #7ed56f;
+$color--medium-green: #55c57a;
+$color--dark-green: #28b485;
+
+$color-white: #fff;
+$color-dark: #666;
+$color-black: #000;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}

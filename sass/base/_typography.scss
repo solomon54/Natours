@@ -1,0 +1,49 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem;
+  font-size: 1.6rem;
+  color: $color-dark;
+}
+
+.header__text--box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  &--primary {
+    margin-bottom: 9.6rem;
+
+    text-transform: uppercase;
+    color: $color-white;
+    backface-visibility: hidden;
+  }
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    /* animation-timing-function: ease-out;
+      animation-iteration-count: 2; */
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    /* animation-timing-function: ease-out;
+      animation-iteration-count: 2; */
+  }
+}
