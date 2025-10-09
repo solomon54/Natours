@@ -72,3 +72,9 @@
     /* transform: rotate(180deg); */
   }
 }
+
+.section-home {
+  .u-center-text:hover {
+    transform: skewX(-10deg) skewY(-2deg);
+  }
+}
