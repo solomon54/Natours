@@ -1,7 +1,6 @@
 .row {
   max-width: $grid-width;
   margin: 0 auto;
-  background-color: #eee;
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
@@ -12,7 +11,7 @@
   // TO SELECT ALL THE COLUMNS
   [class^="col-"] {
     float: left;
-    background-color: violet;
+    // background-color: violet;
 
     &:not(:last-child) {
       margin-right: $guter-horizontal;
@@ -28,14 +27,24 @@
   }
 
   .col-2-of-3 {
-    width: calc((100% - 2 * #{$guter-horizontal}) / 3);
+    width: calc(
+      2 * ((100% - 2 * #{$guter-horizontal}) / 3) + #{$guter-horizontal}
+    );
   }
 
-  .col-1-of-2 {
-    width: calc((100% - #{$guter-horizontal}) / 2);
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$guter-horizontal}) / 4);
   }
 
-  .col-1-of-2 {
-    width: calc((100% - #{$guter-horizontal}) / 2);
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{$guter-horizontal}) / 4) + #{$guter-horizontal}
+    );
+  }
+
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{$guter-horizontal}) / 4) + 2 * #{$guter-horizontal}
+    );
   }
 }
