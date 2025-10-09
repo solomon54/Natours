@@ -61,10 +61,6 @@
     /* transform: rotate(180deg); */
   }
 }
-.section-home .u-center-text:hover {
-  transform: skewX(-10deg) skewY(-2deg);
-}
-
 /*
 COLORS:
 
@@ -105,13 +101,13 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.header .header__text--box--primary {
+.header .heading--primary {
   margin-bottom: 9.6rem;
   text-transform: uppercase;
   color: #fff;
   backface-visibility: hidden;
 }
-.header .header__text--box--main {
+.header .heading--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -122,7 +118,7 @@ body {
   /* animation-timing-function: ease-out;
   animation-iteration-count: 2; */
 }
-.header .header__text--box--sub {
+.header .heading--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
@@ -134,16 +130,28 @@ body {
   animation-iteration-count: 2; */
 }
 
-.section-home {
-  background-color: #f7f7f7;
-  padding: 15rem 3rem;
-  margin-top: -20vh;
+.heading-secondary {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(45deg, #7ed56f, #28b485);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem #000, 0.3;
+}
+
+.u-center-text {
   text-align: center;
 }
-.section-home .u-center-text {
-  display: inline-block;
-  background-color: #7ed56f transparent;
-  font-size: 2.4rem;
+
+.margin-bottom-8 {
+  margin-bottom: 8rem !important;
 }
 
 .btn:link, .btn:visited {
@@ -191,6 +199,42 @@ body {
 }
 .btn:active {
   box-shadow: 0 0.5rem 1rem rgba(102, 102, 102, 0.2);
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  background-color: #eee;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^=col-] {
+  float: left;
+  background-color: violet;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
 }
 
 .header {
