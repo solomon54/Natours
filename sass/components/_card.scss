@@ -1,0 +1,37 @@
+.card {
+  perspective: 1000rem;
+  height: 60vh;
+  position: relative;
+
+  &__side {
+    box-shadow: 0 2rem 2rem rgba($color-black, 0.2);
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    color: $color-white;
+    font-size: 2rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: all 1s;
+    backface-visibility: hidden;
+    &--front {
+      background-color: greenyellow;
+    }
+
+    &--back {
+      background-color: #3d2fff;
+      transform: rotateY(180deg);
+    }
+  }
+  &:hover &__side--front {
+    background-color: $color--secondary-dark-1;
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    background-color: $color--secondary-dark-1;
+    transform: rotateY(0deg);
+  }
+}
