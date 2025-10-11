@@ -1,0 +1,68 @@
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  &__input {
+    display: block;
+    font-size: $default-font-size;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    opacity: 0.8;
+    width: 40%;
+
+    border-bottom: 0.3rem solid transparent;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+      border-bottom: 0.3rem solid $color--dark-green;
+    }
+
+    &:focus:invalid {
+      border-bottom: 0.3rem solid $color--secondary-dark;
+    }
+  }
+
+  &__lable {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0.7rem 0 0 2rem;
+    display: block;
+    transition: all 0.5s;
+  }
+
+  &__input:placeholder-shown + &__lable {
+    opacity: 0;
+    visibility: hidden;
+    transform: translatY(-4rem);
+  }
+
+  //   Radio button
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding: 5rem;
+  }
+
+  &__radio--button {
+    height: 3rem;
+    width: 3rem;
+    border: 0.5rem solid $color--dark-green;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__radio-input {
+    font-size: 3rem;
+  }
+}
