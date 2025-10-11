@@ -30,6 +30,7 @@
 
 // Section-stories
 .section-stories {
+  position: relative;
   padding: 15rem 0;
-  background-color: $color--gray-light-1;
+  background-color: rgba($color--gray-light-1, 0.3);
 }

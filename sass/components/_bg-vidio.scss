@@ -1,0 +1,14 @@
+.bg-vidio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  opacity: 0.25;
+
+  &--content {
+    object-fit: cover;
+  }
+}

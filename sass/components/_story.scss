@@ -4,8 +4,10 @@
   box-shadow: 0 3rem 6rem rgba($color-black, 0.3);
   border-radius: 0.5rem;
   padding: 6rem;
+  padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-7deg);
+  background-color: rgba($color-white, 0.5);
 
   &__shape {
     width: 15rem;
@@ -15,11 +17,39 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(7deg);
-    &--img {
-      height: 100%;
-    }
+
+    position: relative;
   }
+  &__img {
+    height: 100%;
+    width: 150%;
+    transform: translateX(-5rem) scale(1.2);
+    transition: all 0.5s;
+  }
+
   &__text-box {
     transform: skewX(7deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    font-size: $default-font-size;
+    color: $color-white;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  &:hover &__caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  &:hover &__img {
+    transform: translateX(-5rem) scale(1);
+    filter: blur(3px) brightness(90%);
   }
 }

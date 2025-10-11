@@ -8,6 +8,7 @@ Dark green: #28b485
 */
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -19,5 +20,6 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
