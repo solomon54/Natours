@@ -17,7 +17,7 @@
 <body>
     <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toogle">
-        <label for="navi-toogle" class="navigation__button">Menu</label>
+        <label for="navi-toogle" class="navigation__button"><span class="navigation__icon">&nbsp; `</span></label>
         <div class="navigation__background">&nbsp;</div>
 
         <nav class="navigation__nav">
@@ -160,7 +160,7 @@
                                     <p class="card__price--only">Only</p>
                                     <p class="card__price--value">&dollar; 279</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                                     <p class="card__price--only">Only</p>
                                     <p class="card__price--value">&dollar; 497</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -224,7 +224,7 @@
                                     <p class="card__price--only">Only</p>
                                     <p class="card__price--value">&dollar; 897</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -242,7 +242,41 @@
             </div>
         </section>
 
+        <!-- pop up window -->
+        <div class="popup" id="popup">
+            <div class="popup__content ">
+                <div class="popup__scale">
+                    <div class="popup__left"><img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                        <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                    </div>
 
+                    <div class="popup__right">
+                        <a href="#toures" class="popup__close">&times;</a>
+                        <h2 class="heading-secondary u-margin-bottom-medium">Strat booking now!</h2>
+                        <h3 class="heading--tertiary u-margin-bottom-small"> &mdash; here is an overview of what
+                            your tour Looks like</h3>
+                        <p class="popup__text">Ethiopia's National Parks
+                            There are nine National Parks in Ethiopia, each with unique offerings for the visitor. While
+                            Mago, Gambella, and Omo are
+                            best for viewing African wildlife, the Bale Mountain and Simien Mountain Parks are the most
+                            accessible destination for
+                            trekking and outdoor adventure. Massive erosion over the years on the Ethiopian plateau has
+                            created one of the most spectacular landscapes in the world,
+                            with jagged mountain peaks, deep valleys and sharp precipices dropping some 1,500 m. The
+                            park is
+                            home to some extremely
+                            rare animals such as the Gelada baboon, the Simien fox and the Walia ibex, a goat found
+                            nowhere
+                            else in the world.</p>
+
+                        <a href="#cta" class="btn btn--green u-margin-top-medium"> Book now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- section stories -->
 
         <section class="section-stories" id="stories">
 

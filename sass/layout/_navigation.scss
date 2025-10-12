@@ -1,5 +1,6 @@
 .navigation {
   &__checkbox {
+    display: none;
   }
 
   &__button {
@@ -11,6 +12,7 @@
     top: 6rem;
     right: 6rem;
     position: fixed;
+    cursor: pointer;
     z-index: 30;
 
     box-shadow: 0 1.5rem 3rem rgba($color-black, 0.3);
@@ -87,9 +89,10 @@
     }
   }
 
+  // functionality
   &__checkbox:checked ~ &__background {
     opacity: 1;
-    transform: scale(60);
+    transform: scale(80);
   }
 
   &__checkbox:checked ~ &__nav {
@@ -98,5 +101,55 @@
     visibility: visible;
 
     height: 100vh;
+  }
+
+  //   Icon
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    transform: translateX(1.5rem);
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      height: 0.3rem;
+      width: 4rem;
+      background-color: $color--secondary-dark;
+      transition: all 0.5s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+  }
+  &__button:hover &__icon::before {
+    top: -1.3rem;
+  }
+  &__button:hover &__icon::after {
+    top: 1.3rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-45deg);
   }
 }

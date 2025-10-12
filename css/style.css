@@ -119,6 +119,10 @@ body {
   margin-top: 15rem !important;
 }
 
+.u-margin-top-medium {
+  margin-top: 4rem !important;
+}
+
 .footer {
   padding: 10rem 0;
 }
@@ -535,6 +539,82 @@ body {
   font-weight: 100;
 }
 
+.popup {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(102, 102, 102, 0.9);
+  position: fixed;
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 50rem;
+  background-color: #fff;
+  box-shadow: 0 2rem 4rem rgba(102, 102, 102, 0.2);
+  border-radius: 0.4rem;
+  display: table;
+  overflow: hidden;
+  transition: all 1s 0.2s;
+}
+.popup__left {
+  float: left;
+  width: 34%;
+  display: table-cell;
+}
+.popup__img {
+  display: block;
+  width: 100%;
+}
+.popup__right {
+  float: right;
+  width: 66%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3.5rem 5rem;
+}
+.popup__text {
+  font-size: 1.4rem;
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 0.2rem solid #eee;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.popup__close:link, .popup__close:visited {
+  display: inline-block;
+  top: 0rem;
+  right: 2.5rem;
+  font-size: 4rem;
+  color: #000;
+  text-decoration: none;
+  position: absolute;
+  transition: all 0.3s;
+}
+.popup__close:hover {
+  color: red;
+  transform: scale(1.1);
+}
+.popup__scale {
+  transition: all 1s;
+  transform: scale(0.2);
+}
+.popup:target .popup__scale {
+  transform: scale(1);
+}
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -586,6 +666,9 @@ body {
   filter: blur(3px) brightness(90%);
 }
 
+.navigation__checkbox {
+  display: none;
+}
 .navigation__button {
   display: inline-block;
   background-color: #fff;
@@ -595,6 +678,7 @@ body {
   top: 6rem;
   right: 6rem;
   position: fixed;
+  cursor: pointer;
   z-index: 30;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
 }
@@ -653,13 +737,54 @@ body {
 }
 .navigation__checkbox:checked ~ .navigation__background {
   opacity: 1;
-  transform: scale(60);
+  transform: scale(80);
 }
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%;
   visibility: visible;
   height: 100vh;
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem;
+  transform: translateX(1.5rem);
+}
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  display: inline-block;
+  height: 0.3rem;
+  width: 4rem;
+  background-color: #ff7730;
+  transition: all 0.5s;
+}
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.navigation__icon::before {
+  top: -1rem;
+}
+.navigation__icon::after {
+  top: 1rem;
+}
+.navigation__button:hover .navigation__icon::before {
+  top: -1.3rem;
+}
+.navigation__button:hover .navigation__icon::after {
+  top: 1.3rem;
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 .header {
