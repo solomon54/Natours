@@ -1,0 +1,37 @@
+footer {
+  font-size: 1.4rem;
+  color: $color--dark-green;
+  background-color: $color-dark;
+
+  &__logo-box {
+    text-align: center;
+    background-color: yellow;
+  }
+  &__logo {
+    width: 16rem;
+    height: auto;
+  }
+
+  &__navigation {
+    color: red;
+  }
+  &__list {
+    font-size: $default-font-size;
+    list-style: none;
+  }
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+  &__link {
+    text-decoration: non;
+  }
+  &__copyright {
+  }
+
+  // .footer__logo-box {
+  //   text-align: center;
+  // }
+}
