@@ -6,10 +6,6 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
 
 *,
 *::after,
@@ -19,7 +15,36 @@ html {
   box-sizing: inherit;
 }
 
+html {
+  font-size: 62.5%; //1rem = 10px
+  scroll-behavior: smooth;
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem =9px  9/16=
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //  8/16 = 50%
+  }
+  @include respond(phone) {
+    font-size: 43%; //  7/16 = 43%
+  }
+  @include respond(small-phone) {
+    font-size: 37.5%; //  6/16 =
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //  12/16 = 75%
+  }
+}
+
 body {
   scroll-behavior: smooth;
   box-sizing: border-box;
+}
+
+.vido {
+  margin-left: 5rem;
+  &__size {
+    width: 40rem;
+  }
 }

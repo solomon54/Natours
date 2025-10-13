@@ -11,3 +11,53 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// MEDIAQUIERY MANAGER
+/*
+0 --- 600PX  Phons
+600px --- 900PX  Tablate portrite
+900px --- 1200PX  Tablate landscape
+
+1200px --- 1800px [normal code that we allredy done!]
+
+1800px +, large screen device
+
+// BREAKPOINTS
+- small phone
+- phone
+- tab-port
+-tab-land
+- big-desktop
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media (max-width: 31em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 43.7em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

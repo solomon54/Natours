@@ -1,4 +1,21 @@
 /*
+0 --- 600PX  Phons
+600px --- 900PX  Tablate portrite
+900px --- 1200PX  Tablate landscape
+
+1200px --- 1800px [normal code that we allredy done!]
+
+1800px +, large screen device
+
+// BREAKPOINTS
+- small phone
+- phone
+- tab-port
+-tab-land
+- big-desktop
+
+*/
+/*
 COLORS:
 
 Light green: #7ed56f
@@ -6,11 +23,6 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
 *,
 *::after,
 *::before {
@@ -19,9 +31,46 @@ html {
   box-sizing: inherit;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 43.7em) {
+  html {
+    font-size: 43%;
+  }
+}
+@media (max-width: 31em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   scroll-behavior: smooth;
   box-sizing: border-box;
+}
+
+.vido {
+  margin-left: 5rem;
+}
+.vido__size {
+  width: 40rem;
 }
 
 body {
