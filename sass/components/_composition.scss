@@ -8,6 +8,9 @@
     transition: all 0.2s;
     outline-offset: 1.6rem;
 
+    @include respond(tab-port) {
+    }
+
     &--p1 {
       left: 0;
       top: -2rem;

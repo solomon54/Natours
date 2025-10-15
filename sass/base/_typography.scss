@@ -2,7 +2,6 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  padding: 3rem;
   font-size: $default-font-size;
   color: $color-dark;
 }
@@ -33,6 +32,11 @@ body {
       animation-delay: 0.3s;
       /* animation-timing-function: ease-out;
       animation-iteration-count: 2; */
+
+      @include respond(phone) {
+        font-size: 5rem;
+        letter-spacing: 1rem;
+      }
     }
 
     &--sub {
@@ -46,13 +50,18 @@ body {
       animation-delay: 0.3s;
       /* animation-timing-function: ease-out;
       animation-iteration-count: 2; */
+
+      @include respond(phone) {
+        font-size: 2rem;
+        letter-spacing: 1rem;
+      }
     }
   }
 }
 
 .heading-secondary {
   display: inline-block;
-  font-size: 2.4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -64,6 +73,13 @@ body {
   background-clip: text;
   color: transparent;
   transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);

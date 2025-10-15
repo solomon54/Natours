@@ -33,18 +33,20 @@ html {
   }
 
   @include respond(big-desktop) {
-    font-size: 75%; //  12/16 = 75%
+    font-size: 100%; //  12/16 = 75%
   }
 }
 
 body {
   scroll-behavior: smooth;
   box-sizing: border-box;
-}
+  padding: 3rem;
 
-.vido {
-  margin-left: 5rem;
-  &__size {
-    width: 40rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
+  @include respond(phone) {
+    padding: 0;
   }
 }
