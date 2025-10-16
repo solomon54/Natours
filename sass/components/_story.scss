@@ -9,6 +9,15 @@
   transform: skewX(-7deg);
   background-color: rgba($color-white, 0.5);
 
+  @include respond(tab-port) {
+    width: 100%;
+  }
+  @include respond(phone) {
+    transform: skew(0);
+    padding: 3rem;
+    padding-left: 5rem;
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -19,6 +28,10 @@
     transform: translateX(-3rem) skewX(7deg);
 
     position: relative;
+
+    @include respond(phone) {
+      transform: translateX(-1rem) skewX(0);
+    }
   }
   &__img {
     height: 100%;
@@ -29,6 +42,9 @@
 
   &__text-box {
     transform: skewX(7deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {

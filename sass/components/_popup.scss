@@ -16,6 +16,13 @@
     visibility: visible;
   }
 
+  @supports (-webkit-backdrop-filter: blur(1rem)) or
+    (backdrop-filter: blur(1rem)) {
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+    box-shadow: 0 2rem 4rem rgba($color-white, 0.5);
+  }
+
   &__content {
     @include abcenter;
 

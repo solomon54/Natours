@@ -34,7 +34,7 @@
   margin-top: -7rem;
 
   @include respond(tab-port) {
-    padding: 20rem 0;
+    padding: 10rem 0;
   }
 }
 
@@ -51,6 +51,9 @@
     $color--light-green,
     $color--dark-green
   );
+  @include respond(tab-port) {
+    padding: 3rem 0;
+  }
 }
 
 .book {
@@ -65,4 +68,28 @@
   border-radius: 0.3rem;
   background-size: cover;
   padding: 6rem;
+
+  @include respond(tab-port) {
+    width: 90vw;
+    background-image: linear-gradient(
+        110deg,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 65%,
+        rgba($color--dark-green, 0) 50%
+      ),
+      url("../img/nat-10.jpg");
+  }
+
+  @include respond(tab-port) {
+    width: 90vw;
+    background-image: linear-gradient(
+        110deg,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 100%,
+        rgba($color--dark-green, 0) 100%
+      ),
+      url("../img/nat-10.jpg");
+    height: 50rem;
+    padding: 2rem;
+  }
 }
