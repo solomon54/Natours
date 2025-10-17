@@ -50,3 +50,7 @@ body {
     padding: 0;
   }
 }
+::selection {
+  background-color: $color--light-green;
+  color: $color-white;
+}
